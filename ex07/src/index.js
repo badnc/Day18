@@ -1,17 +1,11 @@
-let numberArray  = [9, 5, 4, 11, 5, 12, 13, 15, 4, 2, 5];
+let numberArray  = new Set([9, 5, 4, 11, 5, 12, 13, 15, 4, 2, 5]);
+let uniqueArray = [];
 
-let uniqueArray = new Set([]);
-uniqueArray.add(2);
-uniqueArray.add(4);
-uniqueArray.add(5);
-uniqueArray.add(9);
-uniqueArray.add(11);
-uniqueArray.add(12);
-uniqueArray.add(13);
-uniqueArray.add(15);
 
-for (let item of uniqueArray){
-    console.log(item);
+for (let set of numberArray){
+    uniqueArray.push(set);
 }
+uniqueArray.sort((a,b) => a -b);
+console.log(uniqueArray);
 
 module.exports = { numberArray, uniqueArray };
